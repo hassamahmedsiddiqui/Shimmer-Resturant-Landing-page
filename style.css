@@ -1,0 +1,733 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: azure;
+  /* background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 6%, rgba(223, 217, 217, 1) 83%); */
+
+  height: 100vh;
+
+
+}
+
+.navbar-nav {
+  padding: 4px 347px;
+  gap: 10px;
+
+}
+
+.nav-item {
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: darkgreen;
+}
+
+.nav-item :hover {
+  color: red;
+  font-weight: bold;
+}
+
+.navbar-brand {
+  font-weight: bolder;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  font-style: italic;
+  color: #121212;
+
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+    0px -4px 10px rgba(255, 255, 255, 0.3);
+
+
+}
+
+/* navbar button styling */
+
+.cta {
+  border: none;
+  background: none;
+  margin-left: -225px;
+  font-size: 14px !important;
+  font-weight: 700;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: darkgreen;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: red;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+/* banner button styling */
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button.learn-more {
+  width: 12rem;
+  height: auto;
+}
+
+button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #FFFF2E;
+  border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #ffff;
+}
+
+button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid black;
+  border-right: 0.125rem solid black;
+  transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: darkgreen;
+  font-weight: bolder;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+button:hover .circle {
+  width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+  background: black;
+  transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+  color: black;
+}
+
+/* Styling or setting positions of left side banner  */
+.banner-left {
+  margin-top: 90px;
+}
+
+.tag-line {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.60rem;
+  line-height: 1.3;
+}
+
+p span {
+  color: darkgreen;
+  font-weight: bold;
+
+}
+
+.banner-heading {
+  color: red;
+  font-weight: bolder;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: italic;
+  font-size: 40px;
+}
+
+.sub-heading{
+  margin-top: 30px;
+}
+.sub-heading h2 {
+  color: red;
+  font-weight: bolder;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+/*   
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+    0px -4px 10px rgba(255, 255, 255, 0.3); */
+
+}
+
+/* givingg some margin to menu-sectio */
+
+.menu-section{
+  margin-top: 50px ;
+  align-items: center !important;
+  margin-left:100px !important;
+  
+}
+
+/* styling of menu sections cards */
+
+.cardui {
+  box-sizing: border-box;
+  width: 190px;
+  height: 254px;
+  background: rgba(217, 217, 217, 0.58);
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  /* backdrop-filter: blur(6px); */
+  border-radius: 17px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-weight: bolder;
+  color: black;
+}
+
+.cardui:hover {
+  border: 1px solid red;
+  transform: scale(1.05);
+}
+
+.cardui:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+
+/* card text and styling */
+.cardui>div>h5{
+  font-size: 15px;
+  color: darkgreen;
+  text-transform: capitalize;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.cardui>div>h5>span{
+  padding-left: 15px;
+  color: red;
+
+}
+
+/* ratingg styling and manage the rating position */
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  /* gap: 0.3rem; */
+  --stroke: #666;
+  --fill: #ffc73a;
+  
+}
+
+.rating input {
+  appearance: unset;
+}
+
+.rating label {
+  cursor: pointer;
+}
+
+.rating svg {
+  width: 1.2rem;
+  height: 3rem;
+  overflow: visible;
+  fill: transparent;
+  stroke: var(--stroke);
+  stroke-linejoin: bevel;
+  stroke-dasharray: 12;
+  animation: idle 4s linear infinite;
+  transition: stroke 0.2s, fill 0.5s;
+}
+
+@keyframes idle {
+  from {
+    stroke-dashoffset: 24;
+  }
+}
+
+.rating label:hover svg {
+  stroke: var(--fill);
+}
+
+.rating input:checked ~ label svg {
+  transition: 0s;
+  animation: idle 4s linear infinite, yippee 0.75s backwards;
+  fill: var(--fill);
+  stroke: var(--fill);
+  stroke-opacity: 0;
+  stroke-dasharray: 0;
+  stroke-linejoin: miter;
+  stroke-width: 8px;
+}
+
+@keyframes yippee {
+  0% {
+    transform: scale(1);
+    fill: var(--fill);
+    fill-opacity: 0;
+    stroke-opacity: 1;
+    stroke: var(--stroke);
+    stroke-dasharray: 10;
+    stroke-width: 1px;
+    stroke-linejoin: bevel;
+  }
+
+  30% {
+    transform: scale(0);
+    fill: var(--fill);
+    fill-opacity: 0;
+    stroke-opacity: 1;
+    stroke: var(--stroke);
+    stroke-dasharray: 10;
+    stroke-width: 1px;
+    stroke-linejoin: bevel;
+  }
+
+  30.1% {
+    stroke: var(--fill);
+    stroke-dasharray: 0;
+    stroke-linejoin: miter;
+    stroke-width: 8px;
+  }
+
+  60% {
+    transform: scale(1.2);
+    fill: var(--fill);
+  }
+}
+
+.main{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+
+.card-button{
+  /* margin-top: 4px; */
+  color: black;
+  border: 1px solid red;
+  padding: 4px;
+  border-radius: 30px;
+}
+.card-button:hover{
+  background-color: #121212;
+  color: white;
+}
+
+/* media queries for setting navbar */
+
+@media screen and (max-width: 578px) {
+  .navbar-nav {
+    padding: 15px 60px;
+    gap: 10px;
+  
+  }
+  .cta span{
+    padding-left: 285px;
+  }
+  
+
+}
+
+@media screen and (max-width: 950px) {
+  .navbar-nav {
+    padding: 15px 60px;
+    gap: 10px;
+  
+  }
+  .cta span{
+    padding-left: 285px;
+  }
+  
+
+}
+
+
+/* featured services styling */
+
+
+.featured-service-heading h2{
+  color: red;
+  font-weight: bolder;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.featured-service-heading h2 span{
+  color: darkgreen;
+}
+/* giving margin top to fearured section */
+.featured-section{
+  margin-top: 30px;
+}
+
+/* featured section card styling */
+
+
+.card {
+  width: 12rem;
+  cursor: pointer;
+  border-radius: 50%;
+  
+}
+
+.content {
+  text-align: center;
+  position: relative;
+  transition: all 2.25s;
+  background-color: #FFFF2E;
+  color: black;
+  padding: 5em;
+  transform-style: preserve-3d;
+}
+
+.card:hover .content {
+  transform: rotateY(0.5turn);
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 2em;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.title {
+  transform: translateZ(5rem);
+  font-size: 2rem;
+}
+
+.subtitle {
+  transform: translateZ(2rem);
+}
+
+.back {
+  transform: rotateY(0.5turn);
+  background-color: red;
+  color: white;
+}
+
+.description {
+  transform: translateZ(3rem);
+}
+
+.featured-section{
+  padding-left: 80px;
+}
+
+
+
+/* ............... */
+
+/* Customer reviews section */
+
+
+.card-review {
+  background-color: rgba(243, 244, 246, 1);
+  padding: 2rem;
+  max-width: 320px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+}
+.card-review:hover{
+  background-color:#e3e9e9;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  grid-gap: 1rem;
+  gap: 1rem;
+}
+
+.header .image {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 9999px;
+  object-fit: cover;
+  
+} 
+
+.stars {
+  display: flex;
+  justify-content: center;
+  grid-gap: 0.125rem;
+  gap: 0.125rem;
+  color:yellow;
+}
+
+.stars svg {
+  height: 1rem;
+  width: 1rem;
+}
+
+.name {
+  margin-top: 0.25rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgba(55, 65, 81, 1);
+}
+
+.message {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  margin-top: 1rem;
+  color: rgba(107, 114, 128, 1);
+}
+
+
+
+
+/* footer section */
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+.footer-section {
+background: #151414;
+position: relative;
+}
+.footer-cta {
+border-bottom: 1px solid #373636;
+}
+.single-cta i {
+color: #ff5e14;
+font-size: 30px;
+float: left;
+margin-top: 8px;
+}
+.cta-text {
+padding-left: 15px;
+display: inline-block;
+}
+.cta-text h4 {
+color: #fff;
+font-size: 20px;
+font-weight: 600;
+margin-bottom: 2px;
+}
+.cta-text span {
+color: #757575;
+font-size: 15px;
+}
+.footer-content {
+position: relative;
+z-index: 2;
+}
+.footer-pattern img {
+position: absolute;
+top: 0;
+left: 0;
+height: 330px;
+background-size: cover;
+background-position: 100% 100%;
+}
+.footer-logo h2{
+  color: white;
+  text-transform: capitalize;
+  letter-spacing: 0.25rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+}
+.footer-logo h2 a {
+  text-decoration: none;
+}
+.footer-text p {
+margin-bottom: 14px;
+font-size: 14px;
+    color: #7e7e7e;
+line-height: 28px;
+}
+.footer-social-icon span {
+color: #fff;
+display: block;
+font-size: 20px;
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+margin-bottom: 20px;
+}
+.footer-social-icon a {
+color: #fff;
+font-size: 16px;
+margin-right: 15px;
+}
+.footer-social-icon i {
+height: 40px;
+width: 40px;
+text-align: center;
+line-height: 38px;
+border-radius: 50%;
+}
+.facebook-bg{
+background: #3B5998;
+}
+.twitter-bg{
+background: #55ACEE;
+}
+.google-bg{
+background: #DD4B39;
+}
+.footer-widget-heading h3 {
+color: #fff;
+font-size: 20px;
+font-weight: 600;
+margin-bottom: 40px;
+position: relative;
+}
+.footer-widget-heading h3::before {
+content: "";
+position: absolute;
+left: 0;
+bottom: -15px;
+height: 2px;
+width: 50px;
+background: #ff5e14;
+}
+.footer-widget ul li {
+display: inline-block;
+float: left;
+width: 50%;
+margin-bottom: 12px;
+}
+.footer-widget ul li a:hover{
+color: #ff5e14;
+}
+.footer-widget ul li a {
+color: #878787;
+text-transform: capitalize;
+}
+.subscribe-form {
+position: relative;
+overflow: hidden;
+}
+.subscribe-form input {
+width: 100%;
+padding: 14px 28px;
+background: #2E2E2E;
+border: 1px solid #2E2E2E;
+color: #fff;
+}
+.subscribe-form button {
+  position: absolute;
+  right: 0;
+  background: #ff5e14;
+  padding: 13px 20px;
+  border: 1px solid #ff5e14;
+  top: 0;
+}
+.subscribe-form button i {
+color: #fff;
+font-size: 22px;
+transform: rotate(-6deg);
+}
+.copyright-area{
+background: #202020;
+padding: 25px 0;
+}
+.copyright-text p {
+margin: 0;
+font-size: 14px;
+color: #878787;
+}
+.copyright-text p a{
+color: #ff5e14;
+}
+.footer-menu li {
+display: inline-block;
+margin-left: 20px;
+}
+.footer-menu li:hover a{
+color: #ff5e14;
+}
+.footer-menu li a {
+font-size: 14px;
+color: #878787;
+}
